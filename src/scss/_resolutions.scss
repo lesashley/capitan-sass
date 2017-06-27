@@ -7,13 +7,20 @@
     width:grid($i,100%,12);
   }
 }
-// @media(min-width: 768px){
-//   @for $i from 1 through 12{
-//     .col-#{$i}{
-//       width:grid($i,768px,12);
-//     }
-//   }
-// }
+@media(max-width: 768px){
+  @for $i from 1 through 12{
+    .col-xs-#{$i}{
+      width:grid($i,100%,12);
+    }
+  }
+}
+@media(max-width: 980px){
+  @for $i from 1 through 12{
+    .col-md-#{$i}{
+      width:grid($i,100%,12);
+    }
+  }
+}
 .row::after {
     content: "";
     clear: both;
