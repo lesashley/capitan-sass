@@ -4,10 +4,16 @@
 
 @mixin margin-padding($margin, $padding) {
   margin: $margin;
-  padding: $padding
+  padding: $padding;
 }
+
 @mixin font-white {
   color: $font-color-principal;
+}
+*{
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  @include margin-padding(0,0);
 }
 header{
   background-color: $color-principal;
@@ -22,6 +28,7 @@ header{
     @include margin-padding(0,0);
   }
 }
+
 @for $i from 1 to 4{
   .item#{$i}{
     list-style: none;
@@ -36,14 +43,28 @@ header{
   @extend .item1;
   background-color: $color-principal;
 }
+
+.lista{
+  li{
+    width: 170px;
+    position: relative;
+  }
+  input{
+    position: absolute;
+    right: 0;
+  }
+}
+.asistencia{
+  padding: 10px 50px;
+}
 .aside{
   background-color: $color-secundario;
   text-align: center;
   @include margin-padding(5px, 10px);
   @include font-white;
-  h1{
+  h2{
     font-weight: bold;
-    font-size: $font-base + 5px;
+    font-size: $font-base + 2px;
   }
 }
 footer{

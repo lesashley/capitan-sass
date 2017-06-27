@@ -3,14 +3,15 @@
   <head>
     <title>Ejercicio</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
     <header>
       <h1>Capitan</h1>
     </header>
     <div class="row">
-      <div class="col-12">
-        <div class="panel col-6">
+      <!-- <div class="col-12"> -->
+        <div class="panel col-3 col-xs-12">
           <ul>
             <li class="item1">Prework</li>
             <li class="item2">Quiz</li>
@@ -18,16 +19,9 @@
             <li class="item4">Ejercicio</li>
           </ul>
         </div>
-        <div class="col-6">
-          <h1>Ejercicio</h1>
-          <p>Este es el contenedor principal, el objetivo es que todo se vea bien aun cambiando las resoluciones, deberas cambiar los colores y tamaños explotando las variables y funciones de SASS</p>
-          <p>Deberas obtener la lista de asistencia usando la API ubicada en <a href="http://laboratoria.cuadra.co:9339/api/v1/students/">http://laboratoria.cuadra.co:9339/api/v1/students/</a> y agregarle estilos con SASS</p>
+        <div class="col-6 asistencia">
           <h4>Asistencia: </h4>
-          <ol>
-            <li> Andrea   <input type="checkbox"> </li>
-            <li> Maria    <input type="checkbox"> </li>
-            <li> Fernanda <input type="checkbox"> </li>
-          </ol>
+          <ol class="lista"></ol>
         </div>
         <div class="col-3">
           <div class="aside">
@@ -42,10 +36,12 @@
           </div>
         </div>
 
-      </div>
+      <!-- </div> -->
     </div>
     <footer>
       <p>Cambiar el tamano de la ventana y cambiar tamaño de esto.</p>
     </footer>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
