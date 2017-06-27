@@ -1,0 +1,19 @@
+@function grid($width,$col) {
+  @return $width - ($width/$col);
+}
+$col:12;
+@for $i from 1 through 12{
+  .col-#{$i}{
+    width:grid(100%,$col)
+  }
+  $col: $col - 1;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+}

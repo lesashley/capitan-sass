@@ -1,0 +1,55 @@
+@import "colors";
+@import "fonts";
+@import "resolutions";
+
+@mixin margin-padding($margin, $padding) {
+  margin: $margin;
+  padding: $padding
+}
+@mixin font-white {
+  color: $font-color-principal;
+}
+header{
+  background-color: $color-principal;
+  padding: 10px;
+  h1{
+    @include font-white;
+  }
+}
+
+.panel{
+  ul{
+    @include margin-padding(0,0);
+  }
+}
+@for $i from 1 to 4{
+  .item#{$i}{
+    list-style: none;
+    background-color: $color-secundario;
+    margin: 5px;
+    padding: 10px;
+    font-weight: bold;
+    @include font-white;
+  }
+}
+.item4{
+  @extend .item1;
+  background-color: $color-principal;
+}
+.aside{
+  background-color: $color-secundario;
+  text-align: center;
+  @include margin-padding(5px, 10px);
+  @include font-white;
+  h1{
+    font-weight: bold;
+    font-size: $font-base + 5px;
+  }
+}
+footer{
+  padding: 10px;
+  text-align: center;
+  background-color: $color-secundario;
+  font-size: $font-base - 1px;
+  @include font-white;
+}
